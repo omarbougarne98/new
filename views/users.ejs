@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <ul>
+        <% users.forEach(function(user) { %>
+            <li>
+                <%= user.first_name %> <%= user.last_name %> - <%= user.adress %> 
+                <a href="/users/edit/<%= user.user_id %>">Edit</a>
+                <form action="/users/delete/<%= user.user_id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/users/new">Add New User</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New User</title>
+</head>
+<body>
+    <h1>Add New User</h1>
+    <form action="/users" method="POST" enctype="multipart/form-data">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required>
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" name="birthDate" required>
+        <label for="userImage">User Image:</label>
+        <input type="file" name="userImage">
+        <label for="address">Address:</label>
+        <input type="text" name="address" required>
+        <label for="subscriptionDate">Subscription Date:</label>
+        <input type="date" name="subscriptionDate" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <label for="role">Role:</label>
+        <select name="role">
+            <option value="student">Student</option>
+            <option value="mentor">Mentor</option>
+        </select>
+        <button type="submit">Add User</button>
+    </form>
+</body>
+</html>
